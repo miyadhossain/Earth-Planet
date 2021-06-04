@@ -1,12 +1,7 @@
-// new images
-
-const plant_1 = require("../assets/images/plant_1.jpeg");
+const plant_1 = require("../assets/images/plant_1.jpg");
 const plant_2 = require("../assets/images/plant_2.jpg");
 const plant_3 = require("../assets/images/plant_3.jpg");
 const plant_4 = require("../assets/images/plant_4.jpg");
-const plant_5 = require("../assets/images/plant_5.jpg");
-const plant_6 = require("../assets/images/plant_6.jpg");
-const plant_7 = require("../assets/images/plant_7.jpg");
 
 const orchid_1 = require("../assets/images/orchid_1.jpg");
 const orchid_2 = require("../assets/images/orchid_2.jpg");
@@ -19,14 +14,10 @@ const flower_3 = require("../assets/images/flower_3.jpg");
 const flower_4 = require("../assets/images/flower_4.jpg");
 
 export default {
-  // new images
   plant_1,
   plant_2,
   plant_3,
   plant_4,
-  plant_5,
-  plant_6,
-  plant_7,
   orchid_1,
   orchid_2,
   orchid_3,

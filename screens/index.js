@@ -1,5 +1,5 @@
 import Home from "./Home";
 import OrderDelivery from "./OrderDelivery";
-import Restaurant from "./Restaurant";
+import Plant from "./Plant";
 
-export { Home, Restaurant, OrderDelivery };
+export { Home, Plant, OrderDelivery };

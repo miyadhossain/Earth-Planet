@@ -1,23 +1,20 @@
 # Earth Planet
 
-### A Luxary Properties Web Application
+### A Earth Planet Cross Platform Mobile Application (Android & Ios)
 
-#### The ultimate luxary properties E-commerce
+#### The ultimate Plants & Flowers E-commerce
 
 ## Features
 
 - Home Page
-  - Luxaries properties overview
-  - Properties Location and images
-  - Navbar and Footer Included
-- Details / Review Page
-  - User can get details overview here
-  - Properties Price Included
-  - Properties details i.e Bed rooms, Drawing room & kitchen rooms overview
+  - Plant Categories
+  - Search, Wish List, User Account
+  - Categories wise image thumnail
+    overview
   - User can go forward Checkout page
-- Authentication System & User Account Profile
-  - User can create an account or Sign in
-  - User account profile & cart history
+- Plants Details & Checkout
+  - Add to Cart
+  - Orders Checkout
 
 ## ScreenShot
 
@@ -33,11 +30,6 @@
 ```bash
   npm install
 
-  npm start
+  react-native run-android (for android)
+  react-native run-ios (for Ios)
 ```
-
-## Project Link
-
-<!-- Links -->
-
-[Live Site](https://dream-abode.web.app/)

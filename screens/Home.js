@@ -11,8 +11,8 @@ import {
 import { COLORS, FONTS, icons, images, SIZES } from "../constants";
 
 const Home = ({ navigation }) => {
-  const Title = {
-    title_name: "Earth Planet",
+  const Location = {
+    title_name: "Search Location",
   };
 
   const categoryData = [
@@ -142,10 +142,10 @@ const Home = ({ navigation }) => {
   const [categories, setCategories] = React.useState(categoryData);
   const [selectedCategory, setSelectedCategory] = React.useState(null);
   const [plants, setPlants] = React.useState(plantData);
-  const [header, setHeader] = React.useState(Title);
+  const [header, setHeader] = React.useState(Location);
 
   function onSelectCategory(category) {
-    //filter restaurant
+    //filter plant
     let plantList = plantData.filter((a) => a.categories.includes(category.id));
     setPlants(plantList);
     setSelectedCategory(category);
@@ -192,7 +192,7 @@ const Home = ({ navigation }) => {
               borderRadius: SIZES.radius,
             }}
           >
-            <Text style={{ ...FONTS.h2 }}>{header.title_name}</Text>
+            <Text style={{ ...FONTS.h5 }}>{header.title_name}</Text>
           </View>
         </View>
 
@@ -272,8 +272,11 @@ const Home = ({ navigation }) => {
 
     return (
       <View style={{ padding: SIZES.padding * 2 }}>
-        <Text style={{ ...FONTS.h1 }}>Main</Text>
-        <Text style={{ ...FONTS.h1 }}>Categories</Text>
+        <Text style={{ ...FONTS.h1, textAlign: "center", color: "#2BC48A" }}>
+          Earth Planet
+        </Text>
+        <Text style={{ ...FONTS.h3 }}>Main</Text>
+        <Text style={{ ...FONTS.h3 }}>Categories</Text>
 
         <FlatList
           data={categories}
@@ -287,12 +290,12 @@ const Home = ({ navigation }) => {
     );
   }
 
-  function renderRestaurantList() {
+  function renderPlantList() {
     const renderItem = ({ item }) => (
       <TouchableOpacity
         style={{ marginBottom: SIZES.padding * 2 }}
         onPress={() =>
-          navigation.navigate("Restaurant", {
+          navigation.navigate("Plant", {
             item,
             header,
           })
@@ -332,7 +335,7 @@ const Home = ({ navigation }) => {
           </View>
         </View>
 
-        {/* Restaurant Info */}
+        {/* Plant Info */}
         <Text style={{ ...FONTS.body2 }}>{item.name}</Text>
 
         <View
@@ -411,7 +414,7 @@ const Home = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       {renderHeader()}
       {renderMainCategories()}
-      {renderRestaurantList()}
+      {renderPlantList()}
     </SafeAreaView>
   );
 };

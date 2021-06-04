@@ -11,16 +11,16 @@ import {
 import { isIphoneX } from "react-native-iphone-x-helper";
 import { COLORS, FONTS, icons, SIZES } from "../constants";
 
-const Restaurant = ({ route, navigation }) => {
+const Plant = ({ route, navigation }) => {
   const scrollX = new Animated.Value(0);
-  const [restaurant, setRestaurant] = React.useState(null);
+  const [plant, setPlant] = React.useState(null);
   const [currentLocation, setCurrentLocation] = React.useState(null);
   const [orderItems, setOrderItems] = React.useState([]);
 
   React.useEffect(() => {
     let { item, currentLocation } = route.params;
 
-    setRestaurant(item);
+    setPlant(item);
     setCurrentLocation(currentLocation);
   });
 
@@ -100,7 +100,7 @@ const Restaurant = ({ route, navigation }) => {
           />
         </TouchableOpacity>
 
-        {/* Restaurant Name Section */}
+        {/* Plant Name Section */}
         <View
           style={{
             flex: 1,
@@ -118,7 +118,7 @@ const Restaurant = ({ route, navigation }) => {
               backgroundColor: COLORS.lightGray3,
             }}
           >
-            <Text style={{ ...FONTS.h3 }}>{restaurant?.name}</Text>
+            <Text style={{ ...FONTS.h3 }}>{plant?.name}</Text>
           </View>
         </View>
 
@@ -142,7 +142,7 @@ const Restaurant = ({ route, navigation }) => {
     );
   }
 
-  function renderFoodInfo() {
+  function renderPlantInfo() {
     return (
       <Animated.ScrollView
         horizontal
@@ -155,10 +155,10 @@ const Restaurant = ({ route, navigation }) => {
           { useNativeDriver: false }
         )}
       >
-        {restaurant?.menu.map((item, index) => (
+        {plant?.menu.map((item, index) => (
           <View key={`menu-${index}`} style={{ alignItems: "center" }}>
             <View style={{ height: SIZES.height * 0.35 }}>
-              {/* Food Image */}
+              {/* Plant Image */}
               <Image
                 source={item.photo}
                 resizeMode="cover"
@@ -257,7 +257,7 @@ const Restaurant = ({ route, navigation }) => {
             height: SIZES.padding,
           }}
         >
-          {restaurant?.menu.map((item, index) => {
+          {plant?.menu.map((item, index) => {
             const opacity = dotPosition.interpolate({
               inputRange: [index - 1, index, index + 1],
               outputRange: [0.3, 1, 0.3],
@@ -379,7 +379,7 @@ const Restaurant = ({ route, navigation }) => {
               }}
               onPress={() =>
                 navigation.navigate("OrderDelivery", {
-                  restaurant: restaurant,
+                  plant: plant,
                   currentLocation: currentLocation,
                 })
               }
@@ -408,7 +408,7 @@ const Restaurant = ({ route, navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       {renderHeader()}
-      {renderFoodInfo()}
+      {renderPlantInfo()}
       {renderOrder()}
     </SafeAreaView>
   );
@@ -421,4 +421,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Restaurant;
+export default Plant;
