@@ -1,20 +1,43 @@
-# Let's Code React-Native
+# Earth Planet
 
-## [Watch it on YouTube](http://bit.ly/ByProgrammersYT)
+### A Luxary Properties Web Application
 
-In this episode of "Let’s Code React Native" series, we are going to build a good looking Food Delivery App based on the design created by ILia on Dribbble.
+#### The ultimate luxary properties E-commerce
 
-Be sure to subscribe to our YouTube channel for more videos like this!
+## Features
 
-## Table of Contents
+- Home Page
+  - Luxaries properties overview
+  - Properties Location and images
+  - Navbar and Footer Included
+- Details / Review Page
+  - User can get details overview here
+  - Properties Price Included
+  - Properties details i.e Bed rooms, Drawing room & kitchen rooms overview
+  - User can go forward Checkout page
+- Authentication System & User Account Profile
+  - User can create an account or Sign in
+  - User account profile & cart history
 
-| Code | Project | Preview | Inspiration | No. of Screens |
-| ------ | ------ | ------ | ------ | ------ |
-| LCRN08 | [Food Delivery App](https://youtu.be/diUDjNwZ8Lg) | <img src="https://cdn.dribbble.com/users/1716131/screenshots/14527824/media/c490abc83e617dcfca83cb67ebf279a1.png?compress=1&resize=1200x900" width="120" /> | [View](https://dribbble.com/shots/14527824-Food-Delivery-Mobile-App) | 3 |
+## ScreenShot
 
-## Contributors
+<!-- imgages -->
 
-<a href="https://github.com/byprogrammers/lets-code-react-native/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=byprogrammers/lets-code-react-native" />
-</a>
+![Properties SS](https://res.cloudinary.com/dxvzhnyuo/image/upload/v1622784640/ss1_wtn53v.png)
+![Properties SS2](https://res.cloudinary.com/dxvzhnyuo/image/upload/v1622784641/ss2_p6vmuh.png)
 
+## Getting Started App
+
+<!-- Code -->
+
+```bash
+  npm install
+
+  npm start
+```
+
+## Project Link
+
+<!-- Links -->
+
+[Live Site](https://dream-abode.web.app/)
